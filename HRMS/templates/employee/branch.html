@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+
+{% block body_block %}
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h1>This is Branch Page</h1>
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
+        </div>
+
+        <div class="col-6">
+<!--            <h1>Here is the Branch List</h1>-->
+<!--            {% for blist in form %}-->
+
+<!--            <h2>{{ blist.branch_name }}</h2>-->
+<!--            <h3>{{ blist.branch_district }}</h3>-->
+
+<!--            {% endfor %}-->
+        </div>
+    </di
+</div>
+
+{% endblock %}
+
+</body>
+</html>
